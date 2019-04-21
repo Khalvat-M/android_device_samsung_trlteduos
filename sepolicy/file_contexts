@@ -1,0 +1,4 @@
+# cbd
+/sbin/cbd               u:object_r:cbd_exec:s0
+
+/dev/gsm_.*             u:object_r:radio_device:s0
