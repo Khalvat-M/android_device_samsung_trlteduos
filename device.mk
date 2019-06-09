@@ -23,7 +23,7 @@ $(call inherit-product-if-exists, vendor/samsung/trlteduos/trlteduos-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/samsung/trlteduos/overlay
 
 # Radio/RIL
-$(call inherit-product, device/samsung/apq8084-common/radio/dual/product.mk)
+$(call inherit-product, device/samsung/trlte-common/radio/dual/product.mk)
 
 # common trlte
 $(call inherit-product, device/samsung/trlte-common/trlte.mk)

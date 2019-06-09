@@ -35,7 +35,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3472883712
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 11874054144
 
 # Radio/RIL
-include $(COMMON_PATH)/radio/dual/board.mk
+include $(DEVICE_PATH)/radio/dual/board.mk
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/samsung/trlteduos/sepolicy
