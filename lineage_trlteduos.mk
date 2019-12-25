@@ -13,15 +13,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_trlteduos.mk \
-    $(LOCAL_DIR)/lineage_trlteduos.mk
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit common LineageOS phone.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-COMMON_LUNCH_CHOICES := \
-    havoc_trlteduos-user \
-    havoc_trlteduos-userdebug \
-    havoc_trlteduos-eng \
-    lineage_trlteduos-user \
-    lineage_trlteduos-userdebug \
-    lineage_trlteduos-eng
+# Inherit from trlte device
+$(call inherit-product, device/samsung/trlteduos/device.mk)
+
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := lineage_trlteduos
+PRODUCT_DEVICE := trlteduos
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := trlteduos
