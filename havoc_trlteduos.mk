@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2018 The HavocOS Project
+# Copyright (C) 2020 The HavocOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit common HavocOS phone.
-$(call inherit-product, vendor/havoc/config/common.mk)
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 # Inherit from trlte device
 $(call inherit-product, device/samsung/trlteduos/device.mk)
